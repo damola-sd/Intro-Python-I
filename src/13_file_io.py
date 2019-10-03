@@ -10,9 +10,16 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
+file = open("src/foo.txt", "r")
+result = file.read()
+print(result)
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make 
 # sure that it contains what you expect it to contain
-
+bar = open("src/bar.txt", "w")
+bar.write("Writing gibberish in a text file\nNew Line")
 # YOUR CODE HERE
+
+read_bar = open("src/bar.txt", "r")
+print(read_bar.read())

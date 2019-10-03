@@ -22,3 +22,17 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+month = datetime.now().month
+year = datetime.now().year
+
+if len(sys.argv) > 1:
+    month = int(sys.argv[1])
+
+if len(sys.argv) > 2:
+    year = int(sys.argv[2])
+
+if(month < 1 or month > 12 or year < 1970 or (not isinstance(month, int)) or (not isinstance(year, int))):
+    print("Arguments expected is either null or month followed by year")
+    exit()
+print(calendar.month(year, month))
